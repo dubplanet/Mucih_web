@@ -1,5 +1,4 @@
-'use client';
-
+"use client";
 import React, { useState, useEffect } from 'react';
 import ArtOrbs from "./ArtOrbs";
 
@@ -12,11 +11,7 @@ interface IslandSceneProps {
   transitionSpeed?: number;
 }
 
-const IslandScene: React.FC<IslandSceneProps> = ({ 
-  className = '', 
-  autoTransition = true,
-  transitionSpeed = CYCLE_DURATION 
-}) => {
+const IslandScene: React.FC<IslandSceneProps> = ({ className = '', autoTransition = true, transitionSpeed = CYCLE_DURATION }) => {
   const [isNight, setIsNight] = useState(false);
   const [transitionProgress, setTransitionProgress] = useState(0);
 
@@ -24,7 +19,7 @@ const IslandScene: React.FC<IslandSceneProps> = ({
     if (!autoTransition) return;
 
     const interval = setInterval(() => {
-      setIsNight(prev => !prev);
+      setIsNight((prev) => !prev);
     }, transitionSpeed);
 
     return () => clearInterval(interval);
