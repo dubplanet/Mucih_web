@@ -113,7 +113,7 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({ className = '', isNight = fal
       audio.removeEventListener('loadedmetadata', updateDuration);
       audio.removeEventListener('ended', handleEnded);
     };
-  }, [currentTrack]);
+  }, [currentTrack, nextTrack, tracks]);
 
   // Handle progress bar click
   const handleProgressClick = (e: React.MouseEvent<HTMLDivElement>) => {

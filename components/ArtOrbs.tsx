@@ -31,7 +31,7 @@ const ArtOrbs: React.FC<ArtOrbsProps> = ({ className = '' }) => {
     return positions;
   };
 
-  const orbPositions = React.useMemo(() => generateOrbPositions(), [tracks.length]);
+  const orbPositions = React.useMemo(() => generateOrbPositions(), [tracks, generateOrbPositions]);
 
   return (
     <div className={`w-full h-full ${className}`}>
