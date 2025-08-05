@@ -7,6 +7,7 @@ export interface Track {
   src: string;
   genre: 'lo-fi' | 'reggae';
   mood: 'chill' | 'upbeat' | 'dreamy' | 'tropical';
+  albumArt?: string;
 }
 
 interface AudioState {
@@ -57,7 +58,8 @@ const defaultTracks: Track[] = [
     artist: 'Tropical Vibes',
     src: '/audio/island-breeze.mp3',
     genre: 'lo-fi',
-    mood: 'chill'
+    mood: 'chill',
+    albumArt: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=400&fit=crop&crop=center'
   },
   {
     id: '2',
@@ -65,7 +67,8 @@ const defaultTracks: Track[] = [
     artist: 'Ocean Waves',
     src: '/audio/sunset-reggae.mp3',
     genre: 'reggae',
-    mood: 'tropical'
+    mood: 'tropical',
+    albumArt: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&h=400&fit=crop&crop=center'
   },
   {
     id: '3',
@@ -73,7 +76,8 @@ const defaultTracks: Track[] = [
     artist: 'Chill Beats',
     src: '/audio/palm-dreams.mp3',
     genre: 'lo-fi',
-    mood: 'dreamy'
+    mood: 'dreamy',
+    albumArt: 'https://images.unsplash.com/photo-1520637836862-4d197d17c27a?w=400&h=400&fit=crop&crop=center'
   },
   {
     id: '4',
@@ -81,7 +85,8 @@ const defaultTracks: Track[] = [
     artist: 'Island Rhythms',
     src: '/audio/caribbean-flow.mp3',
     genre: 'reggae',
-    mood: 'upbeat'
+    mood: 'upbeat',
+    albumArt: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=400&h=400&fit=crop&crop=center'
   },
   {
     id: '5',
@@ -89,7 +94,8 @@ const defaultTracks: Track[] = [
     artist: 'Night Sounds',
     src: '/audio/moonlight-waves.mp3',
     genre: 'lo-fi',
-    mood: 'dreamy'
+    mood: 'dreamy',
+    albumArt: 'https://images.unsplash.com/photo-1493514789931-586cb221d7a7?w=400&h=400&fit=crop&crop=center'
   },
   {
     id: '6',
@@ -97,7 +103,8 @@ const defaultTracks: Track[] = [
     artist: 'Sunny Vibes',
     src: '/audio/beach-party.mp3',
     genre: 'reggae',
-    mood: 'upbeat'
+    mood: 'upbeat',
+    albumArt: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&h=400&fit=crop&crop=center'
   }
 ];
 
