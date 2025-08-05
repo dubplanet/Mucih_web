@@ -1,6 +1,7 @@
-"use client";
+ "use client";
 import { Suspense } from "react";
 import dynamic from "next/dynamic";
+import AudioPlayer from "@/components/AudioPlayer";
 
 const Island = dynamic(() => import("@/components/IslandScene"), {
   ssr: false,
@@ -17,6 +18,8 @@ export default function Home() {
       <Suspense fallback={null}>
         <Island />
       </Suspense>
+      <AudioPlayer />   {/* ← add this line */}
     </main>
   );
 }
+ 
