@@ -1,10 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import ArtOrbs from "@/components/ArtOrbs";
-
-
-
+import ArtOrbs from "./ArtOrbs";
 
 const CYCLE_DURATION = 3000;   // auto-cycle ms  
 const TRANSITION_DURATION = 2000; // fade ms
@@ -264,11 +261,11 @@ const IslandScene: React.FC<IslandSceneProps> = ({
           ))}
         </div>
       )}
+
+      {/* 3D Art Orbs */}
+      <ArtOrbs isNight={isNight} />
     </div>
   );
 };
- {/* 3-D-STYLE ORBS */}
 
 export default IslandScene;
-{/* 3-D-STYLE ORBS */}
-  

@@ -2,6 +2,7 @@
 import { Suspense } from "react";
 import dynamic from "next/dynamic";
 import AudioPlayer from "@/components/AudioPlayer";
+import ArtOrbs from "@/components/ArtOrbs";
 
 const Island = dynamic(() => import("@/components/IslandScene"), {
   ssr: false,
@@ -19,7 +20,9 @@ export default function Home() {
         <Island />
       </Suspense>
       <AudioPlayer />   {/* ← add this line */}
+
     </main>
+
   );
 }
  
