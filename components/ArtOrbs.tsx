@@ -2,23 +2,26 @@
 import { useState } from "react";
 import NftModal from "./NftModal";
 
-export default function ArtOrbs({ isNight }: { isNight: boolean }) {
-  const [open, setOpen] = useState(false);
+interface Props {
+  isNight: boolean;
+}
 
-  // positions as percentages
+export default function ArtOrbs({ isNight }: Props) {
+  const [modalTitle, setModalTitle] = useState<string | null>(null);
+
+  // positions (percentages)
   const orbs = [
-    { id: 1, title: "Lofi Sunset", left: 30, top: 40 },
-    { id: 2, title: "Reggae Wave", left: 70, top: 35 },
-    { id: 3, title: "Island Dream", left: 50, top: 20 },
+    { title: "Lofi Sunset", left: 30, top: 40 },
+    { title: "Reggae Wave", left: 70, top: 35 },
+    { title: "Island Dream", left: 50, top: 20 },
   ];
-interface Props { isNight: boolean; }
 
   return (
     <>
-      {orbs.map((o) => (
+      {orbs.map((o, idx) => (
         <button
-          key={o.id}
-          onClick={() => setOpen(true)}
+          key={idx}
+          onClick={() => setModalTitle(o.title)}
           className={`absolute w-12 h-12 rounded-full transition-all duration-1000 hover:scale-110 animate-pulse
             ${isNight ? "bg-pink-500/80" : "bg-cyan-500/80"}`}
           style={{
@@ -31,7 +34,7 @@ interface Props { isNight: boolean; }
           <span className="sr-only">{o.title}</span>
         </button>
       ))}
-      {open && <NftModal onClose={() => setOpen(false)} />}
+      {modalTitle && <NftModal title={modalTitle} onClose={() => setModalTitle(null)} />}
     </>
   );
 }
