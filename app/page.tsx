@@ -10,7 +10,7 @@ const IslandScene = dynamic(() => import("@/components/IslandScene"), {
   ssr: false,
   loading: () => (
     <div className="h-screen w-screen bg-black flex items-center justify-center text-white">
-      Loading Mucih world…
+      Loading Mucih Island...
     </div>
   ),
 });
