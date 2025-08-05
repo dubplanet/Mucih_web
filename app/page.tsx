@@ -1,4 +1,4 @@
-"use client";
+ "use client";
 import { Suspense } from "react";
 import dynamic from "next/dynamic";
 import AudioPlayer from "@/components/AudioPlayer";
