@@ -190,7 +190,7 @@ const IslandScene: React.FC<IslandSceneProps> = ({ className = '', autoTransitio
           </div>
 
           {/* Second palm tree */}
-          <div className="absolute top-7 right-15">
+          <div className="absolute top-7 right-16">
             {/* Tree trunk */}
             <div className={`w-2 h-14 mx-auto transform rotate-12 transition-all duration-2000 ${
               isNight ? 'bg-amber-900' : 'bg-amber-600'
